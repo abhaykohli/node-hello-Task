@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 env:
    TEST_TAG: abhaykohli/nodehello-beta:test
-   LATEST_TAG: abhaykohli/nodehello-prod:${{ GITHUB_RUN_ATTEMPT}}
+   LATEST_TAG: abhaykohli/nodehello-prod:${{GITHUB_RUN_ATTEMPT}}
 jobs:
   docker:
     runs-on: ubuntu-latest
