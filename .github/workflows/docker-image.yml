@@ -6,9 +6,8 @@ on:
   pull_request:
     branches: [ "master" ]
 env:
-  TEST_TAG: abhaykohli/nodehello-beta:test
-  LATEST_TAG: abhaykohli/nodehello-v1:prod
-  
+   TEST_TAG: abhaykohli/nodehello-beta:test
+   LATEST_TAG: abhaykohli/nodehello-prod:${{ GITHUB.RUN_ID }}
 jobs:
   docker:
     runs-on: ubuntu-latest
