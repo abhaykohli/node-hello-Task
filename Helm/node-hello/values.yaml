@@ -1,0 +1,18 @@
+image:
+  repository: abhaykohli/nodehello-v1
+  tag: prod
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 3000
+
+replicaCount: 2 
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []

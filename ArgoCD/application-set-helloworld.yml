@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/abhaykohli/node-hello-Task.git'
+    repoURL: 'https://github.com/abhaykohli/node-hello-Task.git'  
     targetRevision: master
     path: 'Manifests'
   destination:
