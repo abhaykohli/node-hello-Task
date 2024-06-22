@@ -2,13 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "node-hello.fullname" . }}
-  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "node-hello.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: LoadBalancer  # Change type to LoadBalancer
   ports:
-    - port: {{ .Values.service.port }}
+    - port: 3000
       targetPort: http
       protocol: TCP
       name: http
