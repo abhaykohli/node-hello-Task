@@ -1,6 +1,6 @@
 image:
   repository: abhaykohli/nodehello-v1
-  tag: 9628718275
+  tag: 19
   pullPolicy: IfNotPresent
 
 service:
