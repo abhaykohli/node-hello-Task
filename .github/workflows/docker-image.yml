@@ -40,7 +40,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.LATEST_TAG }}
-          
+
       - name: Check out the repository
         uses: actions/checkout@v4
 
@@ -49,9 +49,9 @@ jobs:
 
       - name: Update values.yaml with new image tag
         run: |
-          sed -i -e 's/tag: .*/tag: '${{ github.run_id }}'/' Helm/node-hello/values.yaml
+          sed -i -e 's/tag: .*/tag: '${{ GITHUB.RUN_NUMBER }}'/' Helm/node-hello/values.yaml
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add Helm/node-hello/values.yaml
-          git commit -m 'Update image tag to ${{ github.run_id }} using actions'
+          git commit -m 'Update image tag to ${{ GITHUB.RUN_NUMBER }} using actions'
           git push
