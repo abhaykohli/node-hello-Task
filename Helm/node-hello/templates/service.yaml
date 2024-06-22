@@ -6,7 +6,7 @@ metadata:
   labels:
     {{- include "node-hello.labels" . | nindent 4 }}
 spec:
-  type: NodePort  # Change type to LoadBalancer
+  type: NodePort  
   ports:
     - port: 3000
       targetPort: http
