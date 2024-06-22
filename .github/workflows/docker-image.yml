@@ -46,6 +46,6 @@ jobs:
           sed -i 's/tag: .*/tag: '${{ github.run_id }}'/' Helm/node-hello/values.yaml
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add node-hello/values.yaml
+          git add Helm/node-hello/values.yaml
           git commit -m 'Update image tag to ${{ github.run_id }} using actions'
           git push
