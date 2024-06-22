@@ -7,7 +7,7 @@ service:
   type: NodePort
   port: 3000
 
-replicaCount: 2 
+replicaCount: 2
 
 ingress:
   enabled: false
