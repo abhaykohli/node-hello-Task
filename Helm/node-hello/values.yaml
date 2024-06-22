@@ -1,5 +1,5 @@
 image:
-  repository: abhaykohli/nodehello-v1
+  repository: abhaykohli/nodehello-prod
   tag: 9628718275
   pullPolicy: IfNotPresent
 
