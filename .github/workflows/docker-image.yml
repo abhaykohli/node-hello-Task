@@ -40,6 +40,9 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.LATEST_TAG }}
+          
+      - name: Check out the repository
+        uses: actions/checkout@v4
 
       - name: Verify values.yaml path
         run: ls -al Helm/node-hello/
