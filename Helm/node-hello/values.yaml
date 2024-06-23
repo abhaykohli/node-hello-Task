@@ -1,6 +1,6 @@
 image:
   repository: abhaykohli/nodehello-prod
-  tag: 32
+  tag: 34
   pullPolicy: IfNotPresent
 
 service:
