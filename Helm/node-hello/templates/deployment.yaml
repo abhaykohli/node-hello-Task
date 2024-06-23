@@ -4,16 +4,16 @@ metadata:
   name: {{ include "node-hello.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "node-hello.labels" . | nindent 4 }}
+    app: nodehello
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "node-hello.selectorLabels" . | nindent 6 }}
+      app: nodehello
   template:
     metadata:
       labels:
-        {{- include "node-hello.selectorLabels" . | nindent 8 }}
+        app: nodehello
     spec:
       containers:
         - name: {{ .Chart.Name }}
