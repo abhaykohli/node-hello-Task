@@ -1,18 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: node-hello
+  name: node-hello-app  # Name of your application
   namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/abhaykohli/node-hello-Task.git'  
-    targetRevision: master
-    path: 'Manifests'
   destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: default
+    server: 'https://kubernetes.default.svc'  # Kubernetes server URL this wiill be deafult as argo is installed on same
+  project: default  
+  source:
+    repoURL: 'https://github.com/abhaykohli/node-hello-Task'  # URL of your Git repository
+    path: Helm/node-hello  # Path within the repository where the Helm chart is located
+    targetRevision: HEAD  # Target revision  to deploy
+    helm:
+      valueFiles:
+        - values.yaml  # values files of helm chartt
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: true  
+      selfHeal: true 
