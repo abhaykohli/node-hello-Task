@@ -8,7 +8,9 @@ Great for testing simple deployments to the cloud
 
 `npm start`
 
-# Note Refer Snips folder for working of application.
+# Note Refer to Snips folder for working of the application.
+
+# This is Just POC/simple implementation of the application !! It is not recommended to use NodePort in production always use LoadBalancer or ingress for exposing the application.
 
 ## Project structure
 ```
@@ -37,8 +39,8 @@ Great for testing simple deployments to the cloud
 2. Create github workflow.
   a. It will have multiple steps as:
   b. Prepare docker build -> login to docker hub (Make sure to store secrets in githubs for uname passed) -> push image with tag same as GITHUB.RUNID --> update Helm chart value with latest image tag.
-3. Create Argo application file that will watch Helm chart values file and will deploy latest revision to our EKS cluster.
-4. Create EKS cluster and install Argo CD in it and expose it as LoadBalancer.
+3. Create an Argo application file that will watch the Helm chart values file and deploy the latest revision to our EKS cluster.
+4. Create an EKS cluster, install Argo CD, and expose it as LoadBalancer.
 5. Create Deployment and service with Type NodePort and open the nodeport on ec2 node of EKS cluster.
 
 ```
