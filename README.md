@@ -10,7 +10,7 @@ Great for testing simple deployments to the cloud
 
 
 ## Project structure
-
+```
 .
 ├── ----------NODE JS K8s PROJECT---------
 ├── | Helm/
@@ -28,5 +28,5 @@ Great for testing simple deployments to the cloud
 ├── ├── .dockerignore
 ├── └── README.md
 └── .github/workflows
-
+```
 
