@@ -8,6 +8,7 @@ Great for testing simple deployments to the cloud
 
 `npm start`
 
+# Note Refer Snips folder for working of application.
 
 ## Project structure
 ```
