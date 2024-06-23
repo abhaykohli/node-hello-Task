@@ -30,3 +30,14 @@ Great for testing simple deployments to the cloud
 └── .github/workflows
 ```
 
+## Description/working
+```
+1. Create Dockerfile and dockerize the nodejs application.
+2. Create github workflow.
+  a. It will have multiple steps as:
+  b. Prepare docker build -> login to docker hub (Make sure to store secrets in githubs for uname passed) -> push image with tag same as GITHUB.RUNID --> update Helm chart value with latest image tag.
+3. Create Argo application file that will watch Helm chart values file and will deploy latest revision to our EKS cluster.
+4. Create EKS cluster and install Argo CD in it and expose it as LoadBalancer.
+5. Create Deployment and service with Type NodePort and open the nodeport on ec2 node of EKS cluster.
+
+```
